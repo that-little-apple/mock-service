@@ -1,13 +1,13 @@
-package com.jd.jshop.mockservice.Controller;
+package com.example.mockservice.Controller;
 
 import com.alibaba.fastjson.JSONArray;
-import com.jd.jshop.mockservice.domain.MockData;
-import com.jd.jshop.mockservice.domain.Result;
+import com.example.mockservice.domain.MockData;
+import com.example.mockservice.domain.Result;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import com.jd.jshop.mockservice.service.MockDataService;
+import com.example.mockservice.service.MockDataService;
 
 import javax.annotation.Resource;
 import java.util.List;

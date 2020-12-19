@@ -1,6 +1,6 @@
-package com.jd.jshop.mockservice.dao;
+package com.example.mockservice.dao;
 
-import com.jd.jshop.mockservice.domain.MockData;
+import com.example.mockservice.domain.MockData;
 
 import java.util.List;
 

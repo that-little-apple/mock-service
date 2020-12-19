@@ -1,4 +1,4 @@
-package com.jd.jshop.mockservice.domain;
+package com.example.mockservice.domain;
 
 import lombok.Data;
 

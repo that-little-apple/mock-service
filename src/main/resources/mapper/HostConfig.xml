@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jd.jshop.http.data.dao.HostConfigMapper">
+    <resultMap id="HostConfig-Map" type="com.jd.jshop.http.data.domain.HostConfig">
+        <constructor>
+            <idArg column="id"  jdbcType="INTEGER" javaType="java.lang.Integer"/>
+            <arg column="host" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="system_key" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="back_ip" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="back_port" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="gmt_create" jdbcType="DATE" javaType="java.sql.Timestamp" />
+            <arg column="gmt_modify" jdbcType="DATE" javaType="java.sql.Timestamp" />
+        </constructor>
+    </resultMap>
+
+    <select id="getById" parameterType="java.lang.Integer" resultMap="HostConfig-Map">
+		select * from cms_host_config
+		where id = #{id}
+	</select>
+
+
+    <select id="getByParam" parameterType="java.util.HashMap" resultMap="HostConfig-Map">
+        select * from cms_host_config
+        <where>
+            <if test="host != null and host != ''">host = #{host} </if>
+            <if test="systemKey != null and systemKey != ''">and system_key = #{systemKey} </if>
+            <if test="backIp != null and backIp != ''">and back_ip = #{backIp} </if>
+            <if test="backPort != null and backPort != ''">and back_port = #{backPort}</if>
+        </where>
+    </select>
+
+    <select id="getAll" resultMap="HostConfig-Map">
+		select * from cms_host_config
+	</select>
+
+    <insert id="add" useGeneratedKeys="true" keyProperty="id" parameterType="com.jd.jshop.http.data.domain.HostConfig">
+		INSERT INTO
+		cms_host_config(id, host, system_key, back_ip, back_port, gmt_create, gmt_modify)
+        VALUES(#{id}, #{host}, #{systemKey}, #{backIp}, #{backPort}, now(), now())
+   	</insert>
+
+    <update id="update" parameterType="com.jd.jshop.http.data.domain.HostConfig">
+        UPDATE cms_host_config
+        <set>
+            <if test="host != null and host != ''">host = #{host},</if>
+            <if test="systemKey != null and systemKey != ''">system_key = #{systemKey},</if>
+            <if test="backIp != null and backIp != ''">back_ip = #{backIp},</if>
+            <if test="backPort != null and backPort != ''">back_port = #{backPort},</if>
+            gmt_modify = now()
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+		DELETE FROM cms_host_config
+		WHERE id = #{id}
+	</delete>
+
+
+</mapper>

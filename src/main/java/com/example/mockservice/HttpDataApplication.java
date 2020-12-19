@@ -1,4 +1,4 @@
-package com.jd.jshop.mockservice;
+package com.example.mockservice;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

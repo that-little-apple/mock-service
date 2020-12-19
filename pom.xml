@@ -12,7 +12,7 @@
     <groupId>org.example</groupId>
     <artifactId>mock-service</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>mock-com.jd.jshop.mockservice.service</name>
+    <name>mock-service</name>
     <description>Demo project for Spring Boot</description>
     <packaging>war</packaging>
     <properties>
@@ -31,6 +31,18 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -54,6 +66,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+<!-- 需要修改成其他第三方包-->
         <dependency>
             <groupId>com.jd.common</groupId>
             <artifactId>jd-common-util</artifactId>
@@ -64,6 +77,11 @@
                     <artifactId>spring</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.2</version>
         </dependency>
 
         <dependency>

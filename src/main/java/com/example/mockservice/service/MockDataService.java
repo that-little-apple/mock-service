@@ -1,7 +1,7 @@
-package com.jd.jshop.mockservice.service;
+package com.example.mockservice.service;
 
-import com.jd.jshop.mockservice.domain.MockData;
-import com.jd.jshop.mockservice.domain.Result;
+import com.example.mockservice.domain.MockData;
+import com.example.mockservice.domain.Result;
 
 import java.util.List;
 
