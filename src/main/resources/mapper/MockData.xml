@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jd.jshop.mockservice.dao.MockDataMapper">
+    <resultMap id="MockData-Map" type="com.jd.jshop.mockservice.domain.MockData">
+        <constructor>
+            <idArg column="id"  jdbcType="INTEGER" javaType="java.lang.Integer"/>
+            <arg column="uri" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="request" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="response" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="status_code" jdbcType="SMALLINT" javaType="java.lang.Integer" />
+            <arg column="method" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="gmt_create" jdbcType="DATE" javaType="java.sql.Timestamp" />
+            <arg column="gmt_modify" jdbcType="DATE" javaType="java.sql.Timestamp" />
+            <arg column="system_id" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="mock_state" jdbcType="SMALLINT" javaType="java.lang.Integer" />
+        </constructor>
+    </resultMap>
+
+    <select id="getById" parameterType="java.lang.Integer" resultMap="MockData-Map">
+		select * from cms_mock_data
+		where id = #{id}
+	</select>
+
+
+    <select id="getByParam" parameterType="java.util.HashMap" resultMap="MockData-Map">
+        select * from cms_mock_data
+        <where>
+            <if test="uri != null and uri != ''"> and uri = #{uri} </if>
+            <if test="request != null and request != ''">and request = #{request} </if>
+            <if test="statusCode != null">and status_code = #{statusCode} </if>
+            <if test="methodType != null and methodType != ''">and method = #{methodType}</if>
+        </where>
+    </select>
+
+    <select id="getAll" resultMap="MockData-Map">
+		select * from cms_mock_data
+	</select>
+
+    <insert id="add" useGeneratedKeys="true" keyProperty="id" parameterType="com.jd.jshop.mockservice.domain.MockData">
+		INSERT INTO
+		cms_mock_data(id, uri, request, response, status_code, method, gmt_create, gmt_modify)
+        VALUES(#{id}, #{uri}, #{request}, #{response}, #{statusCode}, #{methodType}, now(), now())
+   	</insert>
+
+    <update id="update" parameterType="com.jd.jshop.mockservice.domain.MockData">
+        UPDATE cms_mock_data
+        <set>
+            <if test="uri != null">uri = #{uri},</if>
+            <if test="request != null">request = #{request},</if>
+            <if test="response != null">response = #{response},</if>
+            <if test="statusCode != null">status_code = #{statusCode},</if>
+            <if test="methodType != null">method = #{methodType},</if>
+            gmt_modify = now()
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+		DELETE FROM cms_mock_data
+		WHERE id = #{id}
+	</delete>
+
+
+</mapper>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<form id="form1">
+    <div class="forms">
+        <div class="form-group">
+            <label for="configId">ID</label>
+            <input type="text" readonly = "readonly" class="form-control" id="configId" name="id" placeholder="Enter ID" th:value="${item.id}" />
+        </div>
+        <div class="form-group">
+            <label for="configSystemId">System Id</label>
+            <input type="text" class="form-control" id="configSystemId" name="system_id" placeholder="Enter System Id" th:value="${item.systemId}" />
+        </div>
+        <div class="form-group">
+            <label for="configUri">Request Uri</label>
+            <input type="text" class="form-control" id="configUri" name="uri" placeholder="Enter Request Uri" th:value="${item.uri}" />
+        </div>
+        <div class="form-group">
+            <label for="configMethod">Method</label>
+            <input type="text" class="form-control" id="configMethod" name="methodType" placeholder="POST/GET" th:value="${item.methodType}" />
+        </div>
+        <div class="form-group">
+            <label for="configCode">Http Code</label>
+            <input type="text" class="form-control" id="configCode" name="statusCode" placeholder="Enter Http Code" th:value="${item.statusCode}" />
+        </div>
+        <div class="form-group">
+            <label for="configMockState">Mock State(0-Disable, 1-Enable)</label>
+            <input type="text" class="form-control" id="configMockState" name="configMockState" placeholder="Mock State(0-Disable, 1-Enable)" th:value="${item.mockState}" />
+        </div>
+        <div class="form-group">
+            <label for="configResponse">Response Json</label>
+            <input type="text" class="form-control" id="configResponse" name="response" placeholder="Enter Response Content" th:value="${item.response}" />
+        </div>
+    </div>
+</form>
+
+</html>
