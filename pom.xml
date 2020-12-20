@@ -102,7 +102,12 @@
             <version>1.18.12</version>
             <scope>provided</scope>
         </dependency>
-
+        <!-- 数据库密码加密 -->
+        <dependency>
+            <groupId>com.jd.security.configsec</groupId>
+            <artifactId>spring-configsec-sdk</artifactId>
+            <version>1.0.3-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>

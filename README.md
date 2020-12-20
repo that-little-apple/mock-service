@@ -14,9 +14,15 @@ https://github.com/ColorlibHQ/AdminLTE.git
 Github开源后台管理模板10个
 https://blog.csdn.net/c15158032319/article/details/89516479
 AdminLTE vue-Element-Admin Gentelella ant-design-pro iview-admin material-dashboard
+java对象序列化
+https://www.cnblogs.com/kubixuesheng/p/10350523.html
+
+
+遗留问题：
+nginx转发问题
                                                                  
 工程访问地址：
-http://127.0.0.1:8080/page/index.html
+http://127.0.0.1:8080/
                                                      
 
                                       

@@ -14,7 +14,7 @@ import java.sql.Timestamp;
  */
 @Data
 public class HostConfig implements Serializable {
-    private static final long serialVersionUID = -7731651384071045153L;
+    private static final long serialVersionUID = 7731651384071045153L;
 
     /**
      * 记录id
@@ -45,7 +45,9 @@ public class HostConfig implements Serializable {
 
     private Timestamp gmtModify;
 
-    public HostConfig() {}
+    public HostConfig() {
+
+    }
 
     public HostConfig(Integer id, String host, String systemKey, String backIp, String backPort, Timestamp gmtCreate, Timestamp gmtModify) {
         this.id = id;
