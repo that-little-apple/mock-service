@@ -158,4 +158,3 @@ public class MockData implements Serializable {
         this.state = state;
     }
 }
-}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<form id="form1">
+    <div class="forms">
+        <div class="form-group">
+            <label for="configId">ID</label>
+            <input type="text" readonly = "readonly" class="form-control" id="configId" name="id" placeholder="Enter ID" th:value="${item.id}" />
+        </div>
+        <div class="form-group">
+            <label for="host">Host</label>
+            <input type="text" class="form-control" id="host" name="host" placeholder="Enter Host" th:value="${item.host}" />
+        </div>
+        <div class="form-group">
+            <label for="systemKey">System Id</label>
+            <input type="text" class="form-control" id="systemKey" name="systemKey" placeholder="Enter System Key" th:value="${item.systemKey}" />
+        </div>
+        <div class="form-group">
+            <label for="backIp">Back Ip</label>
+            <input type="text" class="form-control" id="backIp" name="backIp" placeholder="Enter Back Ip" th:value="${item.backIp}" />
+        </div>
+        <div class="form-group">
+            <label for="backPort">Back Port</label>
+            <input type="text" class="form-control" id="backPort" name="backPort" placeholder="Enter Back Port" th:value="${item.backPort}" />
+        </div>
+    </div>
+</form>
+
+</html>

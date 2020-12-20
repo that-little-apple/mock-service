@@ -39,13 +39,13 @@
 		select * from cms_mock_data
 	</select>
 
-    <insert id="add" useGeneratedKeys="true" keyProperty="id" parameterType="com.jd.jshop.http.data.domain.MockData">
+    <insert id="add" useGeneratedKeys="true" keyProperty="id" parameterType="com.example.mockservice.domain.MockData">
 		INSERT INTO
 		cms_mock_data(id, uri, request, response, status_code, method, system, gmt_create, gmt_modify, state)
         VALUES(#{id}, #{uri}, #{request}, #{response}, #{statusCode}, #{methodType}, #{system}, now(), now(), state)
    	</insert>
 
-    <update id="update" parameterType="com.jd.jshop.http.data.domain.MockData">
+    <update id="update" parameterType="com.example.mockservice.domain.MockData">
         UPDATE cms_mock_data
         <set>
             <if test="uri != null">uri = #{uri},</if>

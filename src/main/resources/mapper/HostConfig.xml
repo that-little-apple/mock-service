@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.jd.jshop.http.data.dao.HostConfigMapper">
-    <resultMap id="HostConfig-Map" type="com.jd.jshop.http.data.domain.HostConfig">
+<mapper namespace="com.example.mockservice.dao.HostConfigMapper">
+    <resultMap id="HostConfig-Map" type="com.example.mockservice.dao.HostConfigMapper">
         <constructor>
             <idArg column="id"  jdbcType="INTEGER" javaType="java.lang.Integer"/>
             <arg column="host" jdbcType="VARCHAR" javaType="java.lang.String" />
@@ -34,13 +34,13 @@
 		select * from cms_host_config
 	</select>
 
-    <insert id="add" useGeneratedKeys="true" keyProperty="id" parameterType="com.jd.jshop.http.data.domain.HostConfig">
+    <insert id="add" useGeneratedKeys="true" keyProperty="id" parameterType="com.example.mockservice.domain.HostConfig">
 		INSERT INTO
 		cms_host_config(id, host, system_key, back_ip, back_port, gmt_create, gmt_modify)
         VALUES(#{id}, #{host}, #{systemKey}, #{backIp}, #{backPort}, now(), now())
    	</insert>
 
-    <update id="update" parameterType="com.jd.jshop.http.data.domain.HostConfig">
+    <update id="update" parameterType="com.example.mockservice.domain.HostConfig">
         UPDATE cms_host_config
         <set>
             <if test="host != null and host != ''">host = #{host},</if>

@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
  * @description:
  **/
 @SpringBootApplication
-@MapperScan("com.jd.jshop.mockservice.dao")
+@MapperScan("com.example.mockservice.dao")
 public class HttpDataApplication extends WebMvcConfigurationSupport {
 
     public static void main(String[] args) {
