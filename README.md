@@ -1,5 +1,6 @@
 ### 一、技术点
 springboot+thymeleaf(java模版引擎)+adminLTE+mybatis+hikari dataSource+springMvc+junit5
+未做分页查询功能，可以滚动向上查看
 
 ### 二、知识点：
 #### 2.1 java模版引擎 Thymeleaf
@@ -13,10 +14,12 @@ springboot+thymeleaf(java模版引擎)+adminLTE+mybatis+hikari dataSource+spring
    github:https://github.com/ColorlibHQ/AdminLTE
 -  官方文档：
    https://github.com/ColorlibHQ/AdminLTE.git
+- 整合笔记:
+    https://blog.csdn.net/wzyaiwl/article/details/90056329
 
 #### 2.3 Github开源后台管理模板10个
 https://blog.csdn.net/c15158032319/article/details/89516479
-AdminLTE vue-Element-Admin Gentelella ant-design-pro iview-admin material-dashboard
+AdminLTE vue-Element-Admin(小肥羊推荐) Gentelella ant-design-pro iview-admin material-dashboard
 
 ### 三、技术博客
 - 3.1 java对象序列化
@@ -24,7 +27,8 @@ https://www.cnblogs.com/kubixuesheng/p/10350523.html
 - 3.2 hikari datasource
 https://blog.csdn.net/fly_duck/article/details/109755842
 - 3.3 junit5特性 https://blog.csdn.net/qq_35448165/article/details/108680063！
-
+- 3.4 如何SpringBoot项目改为外置Tomcat启动
+https://www.cnblogs.com/qianzf/p/11812931.html
 ### 四、遗留问题：
 nginx转发问题
                                                                  
