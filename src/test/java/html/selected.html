@@ -1,0 +1,24 @@
+<html>
+<head>
+    <!-- 如果启动springboot工程，可以引用本地jquery文件 -->
+<!--    <script src="/js/jquery-1.4.4.min.js"></script>-->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+
+<select multiple="multiple">
+    <option>Volvo</option>
+    <option selected="selected">Saab</option>
+    <option>Mercedes</option>
+    <option>Audi</option>
+</select>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".btn1").click(function(){
+            $(":selected").hide();
+        });
+    });
+</script>
+<button class="btn1">Hide Selected</button>
+</body>
+</html>
