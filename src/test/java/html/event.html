@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<a id="test-link" href="#0" onclick="clickMe()">点我试试</a>
+<script>
+    //写法1：推荐
+    /*$('#test-link').click(function () {
+        alert('Hello!');
+    });*/
+    //写法2：不推荐
+    /*$('#test-link').on('click', function () {
+        alert('Hello!');
+    });*/
+    //写法3：在dom节点上点击触发事件
+    function clickMe() {
+        alert('Hello!');
+    }
+</script>
+</body>
+</html>
